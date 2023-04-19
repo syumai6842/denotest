@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <title>home</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="../typescript/supabase.ts"></script>
+    <script src="./test.js"></script>
+</head>
+<body>
+    <h1>hello</h1>
+    <p id="msg"></p>
+    <form method="post" id="textform">
+        <input type="text" name="textbox" id="textbox">
+        <input type="submit" value="submit">
+    </form>
+
+    
+    <script type="module">
+        function msg(value){
+            document.getElementById("msg").innerHTML = value;
+        }
+        msg("messagetest");
+        const form = document.getElementById("textform");
+        form.addEventListener("submit", async (event)=>{
+            event.preventDefault();
+
+            const data = textbox.value;
+
+            msg(data);
+        });
+
+        const logtext = get(post);
+        console.log(logtext);
+    </script>
+</body>
+</html>

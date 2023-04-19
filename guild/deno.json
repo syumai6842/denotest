@@ -1,0 +1,13 @@
+{
+    "imports": {
+        "model/":"./typescript/"
+    },
+    "tasks": {
+        "dev":"deno run -A --watch ./server.ts"
+    },
+    "typescript": {
+        "files":{
+            "include":["./typescript/*/ts"]
+        }
+    }
+}
